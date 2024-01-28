@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "8000:80"
+
+  use-fastapi:
+    build: .
+    command: ["python", "api_test/use_fastapi.py"]
+    depends_on:
+      - fastapi-app
