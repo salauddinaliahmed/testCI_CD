@@ -8,6 +8,6 @@ services:
 
   use-fastapi:
     build: .
-    command: ["python", "api_test/use_fastapi.py"]
+    command: ["python", "test_fastapi.py"]
     depends_on:
       - fastapi-app
